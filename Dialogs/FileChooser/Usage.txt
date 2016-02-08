@@ -1,0 +1,12 @@
+public void openFileChooserDialog() {
+        FileChooser fileChooser = new FileChooser(this);
+        fileChooser.showDialog();
+        fileChooser.setFileListener(this);
+
+    }
+
+    public void fileSelected(File file) {
+        if(file != null) {
+            Toast.makeText(this,"Choosed File:" + file.getName(),Toast.LENGTH_LONG).show();
+        }
+    }
